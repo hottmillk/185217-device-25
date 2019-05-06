@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Aleksander Tkachuk](https://up.htmlacademy.ru/htmlcss/25/user/185217).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Шевцов](https://up.htmlacademy.ru/htmlcss/25/user/170516).
 
 ---
 
