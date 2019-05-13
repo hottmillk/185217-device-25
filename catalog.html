@@ -11,19 +11,29 @@
         <a class="page-header-logo">
           <img src="img/logo.vsg" width="163" height="35" alt="логитип Device">
         </a>
-        <ul class="user-panel">
-          <li class="search">Поиск по сайту</li>
-          <li>Валентин Петухов</li>
-          <li>Выйти</li>
-          <li>Сравнить</li>
-          <li>Корзина</li>
-        </ul>
-        <ul class="site-navigation">
-          <li><a href="#">Каталог товаров</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
+        <div class="user-panel">
+          <ul class="user-panel__search">
+            <li>Поиск по сайту</li>
+          </ul>
+          <ul class="user-panel__enter">
+            <li>Валентин Петухов</li>
+            <li>Выйти</li>
+          </ul>
+          <ul class="user-panel__basket">
+            <li>Сравнить</li>
+            <li>Корзина</li>
+          </ul>
+        </div>
+        <div class="site-navigation">
+            <ul class="site-navigation__product">
+              <li><a href="#">Каталог товаров</a></li>
+            </ul>
+            <ul class="site-navigation__nav">
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
       </nav>
     </header>
 
@@ -89,9 +99,11 @@
         <a class="page-footer-logo">
           <img src="img/logo-footer.vsg" width="163" height="35" alt="логитип Device">
         </a>
-        <ul class="page-footer__user-nav">
+        <ul class="page-footer__enter">
           <li>Валентин Петухов</li>
           <li>Выйти</li>
+        </ul>
+        <ul class="page-footer_basket">
           <li>Сравнить</li>
           <li>Корзина</li>
         </ul>
