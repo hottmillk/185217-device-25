@@ -13,15 +13,18 @@
           <img src="img/logo-header.svg" width="163" height="35" alt="логитип Device">
         </a>
         <div class="user-panel">
-          <ul class="user-panel__search">
-            <li>Поиск по сайту</li>
-          </ul>
+          <form class="user-panel__search" action="http://echo.htmlacademy.ru" method="get">
+            <input type="search" name="search-input" placeholder="Поиск по сайту" class="page-header-search">
+            <button type="submit" class="visually-hidden search-btn">
+              Найти
+            </button>
+          </form>
           <ul class="user-panel__enter">
-            <li>Войти</li>
+            <li><a href="#">Войти</a></li>
           </ul>
           <ul class="user-panel__basket">
-            <li>Сравнить</li>
-            <li>Корзина</li>
+            <li><a href="#">Сравнить</a></li>
+            <li><a href="#"">Корзина</a></li>
           </ul>
         </div>
         <div class="site-navigation">
@@ -57,7 +60,9 @@
       <section class="main-contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+        <a href="https://goo.gl/maps/yyA12mN7b1G2" class="main-contacts-map">
+          <img src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+        </a>
         <a class="btn" href="#">Напишите нам</a>
       </section>
     </main>
@@ -69,11 +74,11 @@
           <img src="img/logo-footer.svg" width="163" height="35" alt="логитип Device">
         </a>
         <ul class="page-footer__enter">
-          <li>Войти</li>
+          <li><a href="#">Войти</a></li>
         </ul>
         <ul class="page-footer__basket">
-          <li>Сравнить</li>
-          <li>Корзина</li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
       </div>
       <p class="page-footer__address">г. Москва, ул. Строителей, 15</p>
@@ -94,5 +99,28 @@
       </div>
       <img src="img/logo-html.svg" width="27" height="35" alt="html academy logo">
     </footer>
+
+    <!--МОДАЛЬНОЕ ОКНО ФОРМЫ-->
+    <section class="modal modal-contacts-form">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="main-contacts-form" action="http://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="write-us-label" for="name">
+              Ваше имя:
+            </label>
+            <input type="text" class="write-us-input" name="name" id="name" placeholder="Имя и Фамилия">
+            <label class="write-us-label" for="email">
+              Ваш e-mail:
+            </label>
+            <input type="email" class="write-us-input" name="email" id="name" placeholder="email@example.com">
+          </p>
+          <label class="write-us-label" for="text">
+            Текст письма:
+          </label>
+          <textarea class="write-us-textarea" name="text" id="text" placeholder="В свободной форме"></textarea>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+    </section>
+    
   </body>
 </html>
