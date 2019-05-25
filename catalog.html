@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <!-- HEADER -->
     <header class="page-header">
       <nav class="header-navigation">
-        <a class="page-header-logo">
-          <img src="img/logo-header.svg" width="163" height="35" alt="логитип Device">
+        <a class="page-header-logo" href="index.html">
+          <img class="header-logo-img" src="img/logo-header.svg" width="163" height="35" alt="логитип Device">
         </a>
         <div class="user-panel">
           <form class="user-panel__search" action="http://echo.htmlacademy.ru" method="get">
             <input type="search" name="search-input" placeholder="Поиск по сайту" class="page-header-search">
-            <button type="submit" class="visually-hidden search-btn">
+            <button type="submit" class="button search-btn">
               Найти
             </button>
           </form>
           <ul class="user-panel__enter">
             <li><a href="#">Валентин Петухов</a></li>
-            <li><a href="#">Выйти</a></li>
+            <li><a href="#" class="exit-btn">Выйти</a></li>
           </ul>
           <ul class="user-panel__basket">
             <li><a href="#">Сравнить</a></li>
@@ -68,8 +70,8 @@
 
         <!--чекбоксы цвета-->
         <form  class="filters-form"> 
-          <p>Цвет</p>
-          <ul>
+          <p class="form-title">Цвет</p>
+          <ul class="filters-form-list">
             <li>
               <input type="checkbox" id="black" name="black" checked>
               <label for="black">Черный</label>
@@ -93,8 +95,8 @@
           </ul>
         
         <!--Радиокнопка bluetooth-->
-          <p>Bluetooth</p>
-            <ul>
+          <p class="form-title">Bluetooth</p>
+            <ul class="filters-form-list">
               <li>
                 <input name="bluetooth" type="radio" value="yes" id="yes" checked>
                 <label for="yes">Есть</label>
@@ -104,8 +106,10 @@
                 <label for="no">Нет</label>
               </li>
             </ul>
+            <button type="submit" class="button filters-button">
+              Показать
+            </button>
         </form>
-        <a class="btn" href="#">Показать</a>
       </section>
 
       <section class="products">
@@ -140,9 +144,9 @@
         </a>
         <ul class="page-footer__enter">
           <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
+          <li><a href="#" class="exit-btn">Выйти</a></li>
         </ul>
-        <ul class="page-footer_basket">
+        <ul class="page-footer__basket">
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
         </ul>

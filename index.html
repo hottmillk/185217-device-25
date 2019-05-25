@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -15,7 +17,7 @@
         <div class="user-panel">
           <form class="user-panel__search" action="http://echo.htmlacademy.ru" method="get">
             <input type="search" name="search-input" placeholder="Поиск по сайту" class="page-header-search">
-            <button type="submit" class="visually-hidden search-btn">
+            <button type="submit" class="button search-btn">
               Найти
             </button>
           </form>
@@ -48,7 +50,7 @@
       <section class="main-info">
         <h2>О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить наш товар в самые отдаленные точки России! DEVICE работает со многими траспортными компаниями:</p>
+        <p class="main-info__delivery">Мы можем доставить наш товар в самые отдаленные точки России! DEVICE работает со многими траспортными компаниями:</p>
           <ul class="main-info__delivery-list">
             <li>Деловые линии</li>
             <li>Автротрейдинг</li>
@@ -101,7 +103,7 @@
     </footer>
 
     <!--МОДАЛЬНОЕ ОКНО ФОРМЫ-->
-    <section class="modal modal-contacts-form">
+    <section class="modal modal-contacts-form visually-hidden">
       <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="main-contacts-form" action="http://echo.htmlacademy.ru" method="post">
           <p>
