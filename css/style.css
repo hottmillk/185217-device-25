@@ -333,11 +333,79 @@ input[type="search"]::placeholder {
     padding: 0;
     margin: 0;
     list-style: none;
+
 }
-.slider-visible {
+.slider-nav {
+    position: absolute;
+    right: 105px;
+    bottom: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 110px;
+    height: 24px;
+    text-align: center;
+}
+.slider-item {
+    display: none;
+    min-height: 495px;
+}
+
+#product-1:checked ~ .container .slider-list .slider-item:nth-child(1) {
     display: flex;
-    justify-content: space-between;
-    min-height: 500px;
+}
+#product-2:checked ~ .container .slider-list .slider-item:nth-child(2) {
+    display: flex;
+}
+#product-3:checked ~ .container .slider-list .slider-item:nth-child(3) {
+    display: flex;
+}
+#product-1:checked ~ .slider-nav .slider-controls-item--1::before,
+#product-2:checked ~ .slider-nav .slider-controls-item--2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 3px;
+    height: 3px;
+    margin: -2px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+#product-3:checked ~ .slider-nav .slider-controls-item--3::before {
+    content: "";
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    z-index: 2;
+    width: 3px;
+    height: 3px;
+    margin: -2px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+}
+.slider-nav label {
+    position: relative;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0;
+}
+.slider-nav label::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid #000000;
 }
 .slider-item-1 {
     text-align: center;
@@ -413,14 +481,7 @@ input[type="search"]::placeholder {
 .links:active {
     color: rgba(0, 0, 0, 0.3);
 }
-.slider-nav {
-    position: absolute;
-    right: 68px;
-    top: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+
 .circle {
     display: inline-block;
     margin-right: 28px;
@@ -581,6 +642,18 @@ input[type="search"]::placeholder {
     background-color: #e5e5e5;
     background-image: linear-gradient(to bottom,#fff 0,#fff 25%,#e5e5e5 25%,#e5e5e5 100%);
 }
+.services-item:nth-child(2):hover .services-description .description-delivery{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
 .services .container {
     display: flex;
     min-height: 320px;
@@ -684,7 +757,6 @@ input[type="search"]::placeholder {
     background: url(../img/credit.svg) 50% 50% no-repeat;
     top: -68px;
     left: 490px;
-
 }
 .brands {
     margin-bottom: 105px;
@@ -1473,15 +1545,170 @@ input[type="search"]::placeholder {
 }
 
 
-
-
-
-
-
-/* для слайдера на главной*/
-.slider-item {
+/* POPUP */
+.modal {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 4;
+}
+.modal-form {
+    width: 760px;
+    padding: 96px 100px 80px;
+    background-color: #ffffff;
     display: none;
 }
-.slider-visible {
+.input-wrapper {
     display: flex;
+    justify-content: space-between;
 }
+.modal-form .collumn-wrap {
+    margin-bottom: 33px;
+}
+.write-us-form label,
+.write-us-form input {
+    display: block;
+    width: 360px;
+}
+.modal-form label {
+    margin-bottom: 5px;
+}
+.write-us-form label {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #000000;
+}
+.modal-form input,
+.modal-form textarea {
+    box-sizing: border-box;
+    padding: 16px 20px;
+}
+.write-us-form input,
+.write-us-form textarea {
+    color: #000000;
+    font-weight: 400;
+    background-color: #f2f2f2;
+    outline: 0;
+    border: 2px solid transparent;
+}
+.write-us-form input:focus,
+.write-us-form textarea:focus {
+    outline: 2px solid #f7e296;
+    background-color: #ffffff;
+}
+.write-us-form input:not(:focus):hover,
+.write-us-form textarea:not(:focus):hover {
+    background-color: #eaeaea;
+}
+.write-us-form input,
+.write-us-form input:focus,
+.write-us-form textarea,
+.write-us-form textarea:focus {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+input[type="email"]:invalid {
+    background-color: #f6dada;
+}
+.write-us-form .button {
+    width: 200px;
+    padding: 8px 35px;
+    box-sizing: border-box;
+}
+.modal-form textarea {
+    resize: none;
+    min-height: 160px;
+    width: 760px;
+}
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+    background-color: #f0c52e;
+    opacity: 0.5;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+}
+.close-modal:hover {
+    opacity: 1;
+}
+.close-modal:active {
+    opacity: 0.8;;
+}
+
+.close-modal::before,
+.close-modal::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 14px;
+    height: 2px;
+    width: 50%;
+    background-color: #ffffff;
+}
+.close-modal::before {
+    transform: rotate(45deg);
+}
+.close-modal::after {
+    transform: rotate(-45deg);
+}
+.modal-map {
+    height: 560px;
+    width: 960px;
+    display: none;
+}
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+}
+.modal-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+@keyframes bounce{
+    0% { transform: translateY(-1000px) translateX(-50%);}
+    70% { transform: translateY(30px) translateX(-50%); }
+    90% { transform: translateY(-10px) translateX(-50%); }
+    100% { transform: translateY(0) translateX(-50%); }
+}
+
+.modal-show {
+    
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+@keyframes shake{
+    0%, 100%               { transform: translateX(-50%) translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-50%) translateX(-10px); }
+    20%, 40%, 60%, 80%     { transform: translateX(-50%) translateX(10px); }
+}
+.modal-error {
+    animation: shake 0.6s;
+}
+
+
+
+
+
+
+
+
+
+
+

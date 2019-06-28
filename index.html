@@ -77,9 +77,17 @@
 
       <section class="slider container">
         <h2 class="visually-hidden">Слайдер с товарами</h2>
+        <input type="radio" id="product-1" name="toogle" class="visually-hidden" checked>
+        <input type="radio" id="product-2" name="toogle" class="visually-hidden">
+        <input type="radio" id="product-3" name="toogle" class="visually-hidden">
+        <div class="slider-nav">
+          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+          <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
+        </div>
         <div class="container">
           <ul class="slider-list">
-            <li class="slider-item slider-visible">     
+            <li class="slider-item">     
               <div class="slider-item-1">
                 <img src="img/slider-1.png" alt="Самая длинная селфипалка" width="384" height="486">
               </div>
@@ -93,20 +101,7 @@
                 </p>
                 <div class="slider-wrapper">
                   <a href="#" class="slider-link links">Подробнее</a>
-                  <ul class="slider-nav">
-                    <li class="circle active">
-                      <input type="radio" id="circle-1" name="slider-active" class="visually-hidden slider-checkbox" checked>
-                      <label for="circle-1" class="circle-1"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-2" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-2" class="circle-2"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-3" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-3" class="circle-3"></label>
-                    </li>
-                  </ul>
+                  
                 </div>
                 <table class="information">
                   <tbody>
@@ -139,20 +134,7 @@
                 </p>
                 <div class="slider-wrapper">
                   <a href="#" class="slider-link links">Подробнее</a>
-                  <ul class="slider-nav">
-                    <li class="circle active">
-                      <input type="radio" id="circle-1" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-1" class="circle-1"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-2" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-2" class="circle-2"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-3" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-3" class="circle-3"></label>
-                    </li>
-                  </ul>
+                  
                 </div>
                 <table class="information">
                   <tbody>
@@ -179,20 +161,7 @@
                 </p>
                 <div class="slider-wrapper">
                   <a href="#" class="slider-link links">Подробнее</a>
-                  <ul class="slider-nav">
-                    <li class="circle active">
-                      <input type="radio" id="circle-1" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-1" class="circle-1"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-2" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-2" class="circle-2"></label>
-                    </li>
-                    <li class="circle active">
-                      <input type="radio" id="circle-3" name="slider-active" class="visually-hidden slider-checkbox">
-                      <label for="circle-3" class="circle-3"></label>
-                    </li>
-                  </ul>
+                  
                 </div>
                 <table class="information">
                   <tbody>
@@ -287,7 +256,6 @@
               <p class="services-title">Доставка</p>
               <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
-          <!-- ВРЕМЕННО ЗАКОМЕНТИРОВАНО
             <div class="description-warranty description-active">
               <p class="services-title">Гарантия</p>
               <p class="services-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
@@ -296,7 +264,6 @@
               <p class="services-title">Кредит</p>
               <p class="services-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
-            -->
           </div>
         </div>
       </section>
@@ -438,9 +405,35 @@
         </div>
       </div>
     </footer>
-
     <!--МОДАЛЬНОЕ ОКНО ФОРМЫ-->
-   
-    
+    <section class="modal modal-form">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post" class="write-us-form">
+        <div class="input-wrapper">
+          <div class="collumn-wrap">
+            <label class="write-us-label" for="write-us-name">Ваше имя:</label>
+            <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия" class="write-us-input">
+          </div>
+          <div class="collumn-wrap">
+            <label for="write-us-email" class="write-us-label">Ваш e-mail:</label>
+            <input type="email" name="email" id="write-us-email" placeholder="email@example.com" class="write-us-input">
+          </div>
+        </div>
+        <div class="textarea-wrapper">
+          <label class="write-us-label" for="write-us-textarea">Текст письма:</label>
+          <textarea class="write-us-textarea" name="text" id="write-us-textarea" placeholder="В свободной форме"></textarea>
+        </div>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+      <button type="button" class="close-modal">Закрыть</button>
+    </section>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Карта</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4498.1553158150755!2d37.5284326!3d55.6876376!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522103678551" width="960" height="560" style="border:0" allowfullscreen=""></iframe>
+      <img src="img/big-map.jpg" alt="офис улица Строителей 15, Мосвка" width="960" height="560">
+      <button type="button" class="close-modal">Закрыть</button>
+    </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
