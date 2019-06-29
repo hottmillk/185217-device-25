@@ -75,3 +75,18 @@ window.addEventListener("keydown", function(evt){
         }
     }
 })
+
+var services = document.querySelectorAll(".services-description > div");
+    if (0 !== services.length) {
+        var servicesNav = document.querySelector(".services-nav"),
+            servicesItem = document.querySelectorAll(".services-item");
+        servicesNav.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            var s = evt.target;
+            if (s.classList.contains("services-link")) {
+                for (var a = s.parentElement, o = 0; o < services.length; o++) services[o].classList.remove("description-active"), servicesItem[o].classList.remove("active");
+                var d = ".description-" + s.id.split("-")[0];
+                document.querySelector(d).classList.add("description-active"), a.classList.add("active");
+            }
+        })
+    }
